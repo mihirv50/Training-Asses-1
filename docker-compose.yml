@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: training_app_container
+    ports:
+      - "7777:7777"
+    environment:
+      - PORT=7777
+    volumes:
+      - .:/app
+    command: npm run start
